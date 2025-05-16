@@ -1,0 +1,159 @@
+.form-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 0px;
+}
+.form-col {
+    flex: 1 1 0;
+    min-width: 220px;
+}
+@media (max-width: 900px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-col {
+        min-width: 0;
+    }
+}
+table {
+th, td {
+th {
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    background: #f7f7f7;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-bottom: 4px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    word-break: break-word;
+}
+
+th {
+    background: #007bff;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .container {
+        max-width: 98vw;
+        margin: 10px;
+        padding: 10px;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    thead tr {
+        display: none;
+    }
+    tr {
+        margin-bottom: 15px;
+        background: #f9f9f9;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        padding: 8px 0;
+    }
+    td {
+        text-align: left;
+        padding-left: 40%;
+        position: relative;
+        min-height: 30px;
+    }
+    td:before {
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        width: 35%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #333;
+    }
+    td:nth-of-type(1):before { content: "Name"; }
+    td:nth-of-type(2):before { content: "Breakfast"; }
+    td:nth-of-type(3):before { content: "Lunch"; }
+    td:nth-of-type(4):before { content: "Supper"; }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest House Meal Preferences</title>
+    <link rel="stylesheet" href="style.new.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guest House Meal Preferences</h1>
+        <form id="mealForm">
+            <div class="form-row">
+                <div class="form-col">
+                    <div class="form-group">
+                        <label for="name">Customer Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrival-date">Expected Day and Time of Arrival:</label>
+                        <input type="date" id="arrival-date" name="arrival-date" required style="margin-bottom:6px;">
+                        <input type="time" id="arrival" name="arrival" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Breakfast:</label>
+                        <div class="checkbox-group" id="breakfast-group">
+                            <label><input type="checkbox" name="breakfast" value="Hausa Koko & Koose"> Hausa Koko & Koose</label>
+                            <label><input type="checkbox" name="breakfast" value="Chibom (Bread & Egg)"> Chibom (Bread & Egg)</label>
+                            <label><input type="checkbox" name="breakfast" value="Tom Brown"> Tom Brown</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Drinks:</label>
+                        <div class="checkbox-group" id="drinks-group">
+                            <label><input type="checkbox" name="drinks" value="Sobolo"> Sobolo</label>
+                            <label><input type="checkbox" name="drinks" value="Pineapple Juice"> Pineapple Juice</label>
+                            <label><input type="checkbox" name="drinks" value="Pito"> Pito</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-col">
+                    <div class="form-group">
+                        <label style="visibility:hidden">.</label>
+                        <div style="height:32px"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Breakfast (contd):</label>
+                        <div class="checkbox-group" id="breakfast-group-2">
+                            <label><input type="checkbox" name="breakfast" value="Rice Water"> Rice Water</label>
+                            <label><input type="checkbox" name="breakfast" value="Tea & Bread"> Tea & Bread</label>
+                            <label><input type="checkbox" name="breakfast" value="Koko & Bofrot"> Koko & Bofrot</label>
+                        </div>
+                    <div class="form-group">
+                        <label>Drinks (contd):</label>
+                        <div class="checkbox-group" id="drinks-group-2">
+                            <label><input type="checkbox" name="drinks" value="Bissap"> Bissap</label>
+                            <label><input type="checkbox" name="drinks" value="Alvaro"> Alvaro</label>
+                            <label><input type="checkbox" name="drinks" value="Bottled Water"> Bottled Water</label>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <div class="form-group">
+                        <label>Lunch:</label>
+                        <div class="checkbox-group" id="lunch-group">
+                            <label><input type="checkbox" name="lunch" value="Waakye"> Waakye</label>
+                            <label><input type="checkbox" name="lunch" value="Banku & Okro Stew"> Banku & Okro Stew</label>
+                            <label><input type="checkbox" name="lunch" value="Fufu & Light Soup"> Fufu & Light Soup</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-col">
+                    <div class="form-group">
+                        <label>Lunch (contd):</label>
+                        <div class="checkbox-group" id="lunch-group-2">
+                            <label><input type="checkbox" name="lunch" value="Kenkey & Fish"> Kenkey & Fish</label>
+                            <label><input type="checkbox" name="lunch" value="Yam & Palava Sauce"> Yam & Palava Sauce</label>
+                            <label><input type="checkbox" name="lunch" value="Gari Foto"> Gari Foto</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <div class="form-group">
+                        <label>Supper:</label>
+                        <div class="checkbox-group" id="supper-group">
+                            <label><input type="checkbox" name="supper" value="Rice Balls & Groundnut Soup"> Rice Balls & Groundnut Soup</label>
+                            <label><input type="checkbox" name="supper" value="Ampesi & Garden Egg Stew"> Ampesi & Garden Egg Stew</label>
+                            <label><input type="checkbox" name="supper" value="Indomie & Egg"> Indomie & Egg</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-col">
+                    <div class="form-group">
+                        <label>Supper (contd):</label>
+                        <div class="checkbox-group" id="supper-group-2">
+                            <label><input type="checkbox" name="supper" value="Boiled Plantain & Kontomire"> Boiled Plantain & Kontomire</label>
+                            <label><input type="checkbox" name="supper" value="Beans (Red Red) & Fried Plantain"> Beans (Red Red) & Fried Plantain</label>
+                            <label><input type="checkbox" name="supper" value="Jollof Rice"> Jollof Rice</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <h2>Dashboard</h2>
+        <table id="dashboard">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Arrival Time</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Supper</th>
+                    <th>Drinks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Submissions will appear here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

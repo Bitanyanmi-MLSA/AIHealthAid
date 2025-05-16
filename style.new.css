@@ -1,0 +1,210 @@
+body {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed, linear-gradient(120deg, #f7fafc 0%, #e0eafc 100%);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.93);
+    padding: 36px 28px 32px 28px;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0, 123, 255, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #007bff 60%, #00c6ff 100%);
+    opacity: 0.12;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    z-index: 1;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    z-index: 1;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 22px;
+    z-index: 1;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #b3d1ff;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: #fafdff;
+    transition: border 0.2s;
+}
+input[type="text"]:focus {
+    border: 1.5px solid #007bff;
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    background: #f2f8ff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin-bottom: 4px;
+    box-shadow: 0 1px 2px rgba(0,123,255,0.04);
+    cursor: pointer;
+    border: 1px solid #e3eefd;
+    transition: background 0.2s, border 0.2s;
+}
+.checkbox-group label:hover {
+    background: #e6f0ff;
+    border: 1.5px solid #b3d1ff;
+}
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #007bff;
+    width: 18px;
+    height: 18px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+    transition: background 0.2s;
+}
+button:hover {
+    background: linear-gradient(90deg, #0056b3 60%, #0099cc 100%);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    font-size: 1rem;
+    background: #fafdff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1.5px 8px rgba(0,123,255,0.06);
+    z-index: 1;
+    position: relative;
+}
+
+th, td {
+    border: none;
+    padding: 12px 8px;
+    text-align: center;
+    word-break: break-word;
+}
+
+th {
+    background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+tbody tr:nth-child(even) {
+    background: #f2f8ff;
+}
+tbody tr:nth-child(odd) {
+    background: #eaf4ff;
+}
+
+@media (max-width: 700px) {
+    .container {
+        max-width: 99vw;
+        margin: 6px;
+        padding: 7vw 2vw 7vw 2vw;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    thead tr {
+        display: none;
+    }
+    tr {
+        margin-bottom: 15px;
+        background: #f9f9f9;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        padding: 8px 0;
+    }
+    td {
+        text-align: left;
+        padding-left: 40%;
+        position: relative;
+        min-height: 30px;
+        font-size: 1rem;
+    }
+    td:before {
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        width: 35%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #007bff;
+    }
+    td:nth-of-type(1):before { content: "Name"; }
+    td:nth-of-type(2):before { content: "Breakfast"; }
+    td:nth-of-type(3):before { content: "Lunch"; }
+    td:nth-of-type(4):before { content: "Supper"; }
+}
